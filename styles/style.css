@@ -47,7 +47,8 @@
     display: flex;
 }
 
-main {
+main,
+footer {
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -138,7 +139,6 @@ main>section {
     gap: 140px;
 }
 
-
 #feature-section-title {
     border-left: 5px solid #FF900E;
     padding-left: 20px;
@@ -157,6 +157,19 @@ main>section {
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
     margin-bottom: 20px;
     border-radius: 8px;
+}
+
+#experience-badge {
+    padding: 45px 42px;
+    font-weight: 1.5rem;
+    font-weight: 600;
+    margin-left: -92px;
+    margin-top: -77px;
+}
+
+#experience-years {
+    font-size: 4rem;
+    font-weight: 700;
 }
 
 
@@ -198,7 +211,18 @@ main>section {
     margin-bottom: 0px;
 }
 
-/* Spondor Section styles  */
+.fact-container {
+    justify-items: center;
+    gap: 24px;
+}
+
+
+.sponsor-companies {
+    justify-items: center;
+    gap: 50px;
+}
+
+/* Sponsor Section styles  */
 
 .sponsor-info {
     max-width: 540px;
@@ -212,6 +236,19 @@ main>section {
     filter: grayscale(100%);
 }
 
+/* footer styles  */
+
+
+.footer-style {
+    max-width: 1440px;
+    background-color: #FFF4E7;
+    text-align: center;
+    margin-top: 130px;
+    margin-bottom: 0px;
+    padding: 25px 410px;
+}
+
+
 
 /* responsive media query */
 
@@ -219,7 +256,8 @@ main>section {
 
     .navbar,
     .nav-links,
-    .teams {
+    .teams,
+    .features-options {
         flex-direction: column;
     }
 
@@ -232,29 +270,38 @@ main>section {
     .our-features {
         margin-left: 20px;
     }
-}
 
-.fact-container {
-    justify-items: center;
-    gap: 24px;
-}
+    .feature-architect {
+        width: 100%;
+    }
 
+    #experience-badge {
+        margin-top: 20px;
+        margin-left: 10px;
+    }
 
-.sponsor-companies {
-    justify-items: center;
-    gap: 50px;
+    .footer-style {
+        padding: 10px 0px;
+    }
 }
 
 /* medium size device  */
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
-    .teams {
+
+    .teams,
+    .features-options {
         flex-direction: column;
     }
 
     .our-features {
         margin: 50px auto;
     }
+
+    .feature-architect {
+        width: 100%;
+    }
+
 
     .fact-container {
         grid-template-columns: repeat(2, 1fr);
@@ -265,4 +312,14 @@ main>section {
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
     }
+
+    #experience-badge {
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .footer-style {
+        padding: 10px 0px;
+    }
+
 }
